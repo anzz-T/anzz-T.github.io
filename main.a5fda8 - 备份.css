@@ -136,13 +136,8 @@ body {
   font-family: Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
   line-height: 1.5;
   color: #333;
-  min-height: 100%;
-  /*background-color: #fff;*/
-  background-image:
-    /*linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),*/
-    url(./img/2.jpg);
-  /*background-repeat: no-repeat;*/
-  /*background-size: auto;*/
+  background-color: #fff;
+  min-height: 100%
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -611,8 +606,7 @@ body, button, input, select, textarea {
 }
 
 body {
-  /*background: #eaeaea*/
-
+  background: #eaeaea
 }
 
 #container, body, html {
@@ -647,7 +641,7 @@ body {
   position: absolute;
   right: 0;
   min-height: 100%;
-  /*background: #eaeaea;*/
+  background: #eaeaea;
   left: 300px;
   width: auto
 }
@@ -866,7 +860,7 @@ body {
 }
 
 .article-entry .highlight, .article-entry pre {
-  background: #393939;
+  background: #1a0139;
   margin: 10px 0;
   padding: 10px;
   overflow: hidden;
@@ -904,7 +898,7 @@ body {
 }
 
 .article-entry .gist .gist-file .gist-data .line-numbers, .article-entry .highlight .gutter pre, .article-entry .highlight .gutter pre .line {
-  color: #6d8b8b
+  color: #fc0000
 }
 
 .article-entry code, .article-entry pre {
@@ -1942,19 +1936,12 @@ pre .css ~ * .id, pre .id {
 }
 
 .article {
-  /*margin: 30px;*/
-  /*position: relative;*/
-  /*border: 1px solid #ddd;*/
-  /*border-top: 1px solid #fff;*/
-  /*border-bottom: 1px solid #fff;*/
-  /*!*background: #fff;*!*/
-  /*background: rgba(255,255,255,.5);*/
-  /*transition: all .2s ease-in*/
   margin: 30px;
+  position: relative;
   border: 1px solid #ddd;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  background: rgba(255,255,255,.5);
+  background: #fff;
   transition: all .2s ease-in
 }
 
