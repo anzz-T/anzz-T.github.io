@@ -17,18 +17,18 @@
 <meta property="og:site_name" content="anzz">
 <meta property="og:description" content="1. 线程的创建1.1 方法一，继承Thread">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214114154-276488899.png">
-<meta property="og:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214216437-864622217.png">
-<meta property="og:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214334481-1436365111.png">
-<meta property="og:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214414952-1788624892.png">
+<meta property="og:image" content="https://anzz-t.github.io/images/1223046-20190722214114154-276488899.png">
+<meta property="og:image" content="https://anzz-t.github.io/images/1223046-20190722214216437-864622217.png">
+<meta property="og:image" content="https://anzz-t.github.io/images/1223046-20190722214334481-1436365111.png">
+<meta property="og:image" content="https://anzz-t.github.io/images/1223046-20190722214414952-1788624892.png">
 <meta property="og:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214456212-734896654.png">
-<meta property="og:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214547127-782461177.png">
+<meta property="og:image" content="https://anzz-t.github.io/images/1223046-20190722214547127-782461177.png">
 <meta property="article:published_time" content="2019-11-01T09:00:13.000Z">
-<meta property="article:modified_time" content="2021-08-24T09:47:58.524Z">
+<meta property="article:modified_time" content="2021-08-24T10:16:40.981Z">
 <meta property="article:author" content="anzz">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://anzz-t.github.io/2019/11/01/Thread/Thread.assets/1223046-20190722214114154-276488899.png">
+<meta name="twitter:image" content="https://anzz-t.github.io/images/1223046-20190722214114154-276488899.png">
   
     <link rel="alternative" href="/atom.xml" title="anzz" type="application/atom+xml">
   
@@ -335,19 +335,19 @@
 <li>销毁：如果线程正常执行完毕后或线程被提前强制性的终止或出现异常导致结束，那么线程就要被销毁，释放资源;</li>
 </ul>
 <p>完整的生命周期图如下：</p>
-<p>​                <img src="Thread.assets/1223046-20190722214114154-276488899.png" alt="img"></p>
+<p>​                <img src="/images/1223046-20190722214114154-276488899.png" alt="img"></p>
 <h4 id="4-1-新建状态"><a href="#4-1-新建状态" class="headerlink" title="4.1 新建状态"></a>4.1 新建状态</h4><p>我们来看下面一段代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread t1 = <span class="keyword">new</span> Thread();</span><br></pre></td></tr></table></figure>
 
 <p>这里的创建，仅仅是在JAVA的这种编程语言层面被创建，而在操作系统层面，真正的线程还没有被创建。只有当我们调用了 start() 方法之后，该线程才会被创建出来，进入Runnable状态。只有当我们调用了 start() 方法之后，该线程才会被创建出来</p>
-<p>​                                           <img src="Thread.assets/1223046-20190722214216437-864622217.png" alt="img"></p>
+<p>​                                           <img src="/images/1223046-20190722214216437-864622217.png" alt="img"></p>
 <h4 id="4-2-就绪状态"><a href="#4-2-就绪状态" class="headerlink" title="4.2 就绪状态"></a>4.2 就绪状态</h4><p>调用start()方法后，JVM 进程会去创建一个新的线程，而此线程不会马上被 CPU 调度运行，进入Running状态，这里会有一个中间状态，就是Runnable状态，你可以理解为等待被 CPU 调度的状态</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t1.start()</span><br></pre></td></tr></table></figure>
 
 <p>用一张图表示如下：</p>
-<p><img src="Thread.assets/1223046-20190722214334481-1436365111.png" alt="img"></p>
+<p><img src="/images/1223046-20190722214334481-1436365111.png" alt="img"></p>
 <p>那么处于Runnable状态的线程能发生哪些状态转变？</p>
-<p><img src="Thread.assets/1223046-20190722214414952-1788624892.png" alt="img"></p>
+<p><img src="/images/1223046-20190722214414952-1788624892.png" alt="img"></p>
 <p>Runnable状态的线程无法直接进入Blocked状态和Terminated状态的。只有处在Running状态的线程，换句话说，只有获得CPU调度执行权的线程才有资格进入Blocked状态和Terminated状态，Runnable状态的线程要么能被转换成Running状态，要么被意外终止。</p>
 <h4 id="4-3-运行状态"><a href="#4-3-运行状态" class="headerlink" title="4.3 运行状态"></a>4.3 运行状态</h4><p>当CPU调度发生，并从任务队列中选中了某个Runnable线程时，该线程会进入Running执行状态，并且开始调用run()方法中逻辑代码。</p>
 <p>那么处于Running状态的线程能发生哪些状态转变？</p>
@@ -361,7 +361,7 @@
 <li>线程主动调用 yield 方法，让出 CPU 资源，进入Runnable状态</li>
 </ul>
 <h4 id="4-4-阻塞状态"><a href="#4-4-阻塞状态" class="headerlink" title="4.4 阻塞状态"></a>4.4 阻塞状态</h4><p>Blocked状态的线程能够发生哪些状态改变？</p>
-<p><img src="Thread.assets/1223046-20190722214547127-782461177.png" alt="img"></p>
+<p><img src="/images/1223046-20190722214547127-782461177.png" alt="img"></p>
 <ul>
 <li>被转换成Terminated状态，比如调用 stop() 方法，或者是 JVM 意外 Crash;</li>
 <li>被转换成Runnable状态，阻塞时间结束，比如读取到了数据库的数据后；</li>
