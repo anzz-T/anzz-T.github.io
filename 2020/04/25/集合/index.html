@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="0. Iterator接口使用Iterator接口遍历集合元素 1234567891011121314151617181920public class IteratorTest &amp;#123;    @Test    public void test1()&amp;#123;        Collection collection &#x3D; new ArrayList();        collection.">
+  <meta name="description" content="0. Iterator接口使用Iterator接口遍历集合元素">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java集合">
 <meta property="og:url" content="https://anzz.gitee.io/2020/04/25/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="anzz">
-<meta property="og:description" content="0. Iterator接口使用Iterator接口遍历集合元素 1234567891011121314151617181920public class IteratorTest &amp;#123;    @Test    public void test1()&amp;#123;        Collection collection &#x3D; new ArrayList();        collection.">
+<meta property="og:description" content="0. Iterator接口使用Iterator接口遍历集合元素">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://anzz.gitee.io/images/image-20210811101401648.png">
 <meta property="article:published_time" content="2020-04-25T03:35:34.000Z">
-<meta property="article:modified_time" content="2021-08-31T05:40:30.775Z">
+<meta property="article:modified_time" content="2021-09-02T06:22:09.169Z">
 <meta property="article:author" content="anzz">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
@@ -78,7 +78,7 @@
 			
 				<li><a href="/" >主页</a></li>
 			
-				<li><a target="_blank" rel="noopener" href="https://gitee.com/anzz" >码云</a></li>
+				<li><a target="_blank" rel="noopener" href="https://gitee.com/anzz-T" >码云</a></li>
 			
 			</ul>
 		</nav>
@@ -118,7 +118,7 @@
 			
 			
 			<div>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=27969778&auto=0&height=66"></iframe>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=625623&auto=0&height=66"></iframe>
 			</div>
 			
 		
@@ -181,7 +181,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a target="_blank" rel="noopener" href="https://gitee.com/anzz">码云</a></li>
+					<li style="width: 50%"><a target="_blank" rel="noopener" href="https://gitee.com/anzz-T">码云</a></li>
 		        
 				</ul>
 			</nav>
@@ -251,6 +251,8 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h3 id="0-Iterator接口"><a href="#0-Iterator接口" class="headerlink" title="0. Iterator接口"></a>0. Iterator接口</h3><p><strong>使用Iterator接口遍历集合元素</strong></p>
+<span id="more"></span>
+
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Collection collection = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        collection.add(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">        collection.add(<span class="number">456</span>);</span><br><span class="line">        collection.add(<span class="keyword">new</span> String(<span class="string">&quot;xyz&quot;</span>));</span><br><span class="line">        collection.add(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        Iterator iterator = collection.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())&#123;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 错误方法：集合对象每次调用iterator()都会返回一个Iterator对象，默认游标在集合的第一个元素之前</span></span><br><span class="line"><span class="comment">//        while ( collection.iterator().hasNext())&#123;</span></span><br><span class="line">        		<span class="comment">// 无线循环输出第一个元素</span></span><br><span class="line"><span class="comment">//            System.out.println( collection.iterator().next()); 		</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
