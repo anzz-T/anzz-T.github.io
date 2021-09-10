@@ -6,24 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://anzz.gitee.io">
-  <title>“尚筹网”项目笔记 | anzz</title>
+  <title>环形链表 | anzz</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1. 1 项目架构1.1.1 创建工程1.创建空项目atcrowdfunding">
+  <meta name="description" content="Joseph约瑟夫问题问题描述：​    编号为1,2,…,n的n个人按顺时针方向围坐一圈，一开始任选一个正整数作为报数上限值m，从第k(n&gt;k&gt;0)个人开始按顺时针方向自1开始顺序报数，报到m时停止报数。报m的人出列，从他在顺时针方向上的下一个人开始重新从1报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“尚筹网”项目笔记">
-<meta property="og:url" content="https://anzz.gitee.io/2021/06/02/%E2%80%9C%E5%B0%9A%E7%AD%B9%E7%BD%91%E2%80%9D%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="环形链表">
+<meta property="og:url" content="https://anzz.gitee.io/2020/03/17/%E5%8D%95%E5%90%91%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="anzz">
-<meta property="og:description" content="1. 1 项目架构1.1.1 创建工程1.创建空项目atcrowdfunding">
+<meta property="og:description" content="Joseph约瑟夫问题问题描述：​    编号为1,2,…,n的n个人按顺时针方向围坐一圈，一开始任选一个正整数作为报数上限值m，从第k(n&gt;k&gt;0)个人开始按顺时针方向自1开始顺序报数，报到m时停止报数。报m的人出列，从他在顺时针方向上的下一个人开始重新从1报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://anzz.gitee.io/images/image-20210702213312437.png">
-<meta property="og:image" content="https://anzz.gitee.io/images/image-20210702213841010.png">
-<meta property="article:published_time" content="2021-06-02T03:00:54.000Z">
-<meta property="article:modified_time" content="2021-08-24T09:38:54.791Z">
+<meta property="og:image" content="https://anzz.gitee.io/images/image-20210909225438522.png">
+<meta property="og:image" content="https://anzz.gitee.io/images/image-20210909225756390.png">
+<meta property="article:published_time" content="2020-03-17T14:15:44.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:41:30.729Z">
 <meta property="article:author" content="anzz">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://anzz.gitee.io/images/image-20210702213312437.png">
+<meta name="twitter:image" content="https://anzz.gitee.io/images/image-20210909225438522.png">
   
     <link rel="alternative" href="/atom.xml" title="anzz" type="application/atom+xml">
   
@@ -197,14 +198,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-“尚筹网”项目笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-单向环形链表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      “尚筹网”项目笔记
+      环形链表
     </h1>
   
 
@@ -216,8 +217,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2021/06/02/%E2%80%9C%E5%B0%9A%E7%AD%B9%E7%BD%91%E2%80%9D%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2021-06-02T03:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
+<a href="/2020/03/17/%E5%8D%95%E5%90%91%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" class="archive-article-date">
+        <time datetime="2020-03-17T14:15:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
 </a>
 
   
@@ -230,7 +231,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.5k字</span>
+      <span class="post-count">740字</span>
     </span>
   </span>
 
@@ -239,7 +240,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">8分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -250,77 +251,61 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="1-1-项目架构"><a href="#1-1-项目架构" class="headerlink" title="1. 1 项目架构"></a>1. 1 项目架构</h2><h3 id="1-1-1-创建工程"><a href="#1-1-1-创建工程" class="headerlink" title="1.1.1 创建工程"></a>1.1.1 创建工程</h3><p>1.创建空项目atcrowdfunding</p>
+    <h3 id="Joseph约瑟夫问题"><a href="#Joseph约瑟夫问题" class="headerlink" title="Joseph约瑟夫问题"></a>Joseph约瑟夫问题</h3><h4 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a><strong>问题描述</strong>：</h4><p>​    编号为1,2,…,n的n个人按顺时针方向围坐一圈，一开始任选一个正整数作为报数上限值m，从第k(n&gt;k&gt;0)个人开始按顺时针方向自1开始顺序报数，报到m时停止报数。报m的人出列，从他在顺时针方向上的下一个人开始重新从1报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序。</p>
 <span id="more"></span>
 
-<p>2.在 atcrowdfunding项目中创建三个moudle（不选择模板）：</p>
-<ul>
-<li>atcrowdfunding01-admin-parent</li>
-<li>atcrowdfunding05-common-util</li>
-<li>atcrowdfunding06-common-reverse </li>
-</ul>
-<p>3.另外创建三个moudle（不选模板，parent选择atcrowdfunding01-admin-parent）：</p>
-<ul>
-<li>atcrowdfunding02-admin-webui（添加web）</li>
-<li>atcrowdfunding03-admin-component</li>
-<li>atcrowdfunding04-admin-entity</li>
-</ul>
-<p>4.在各自的pom.xml文件中选择打包方式：  </p>
-<p>​    atcrowdfunding01-admin-parent选择pom，atcrowdfunding02-admin-webui选war，其他选jar</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;packaging&gt;war&lt;/packaging&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-2-添加moudle间的依赖关系"><a href="#1-1-2-添加moudle间的依赖关系" class="headerlink" title="1.1.2 添加moudle间的依赖关系"></a>1.1.2 添加moudle间的依赖关系</h3><p>1.依赖关系：</p>
-<ul>
-<li>webui 依赖 component</li>
-<li>component 依赖 entity和util</li>
-</ul>
-<p>2.添加依赖：</p>
-<ul>
-<li><p>atcrowdfunding02-admin-webui下的pom.xml文件：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.atguigu.crowd<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>atcrowdfunding03-admin-component<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>atcrowdfunding03-admin-component下的pom.xml文件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.atguigu.crowd<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>atcrowdfunding04-admin-entity<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.atguigu.crowd<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>atcrowdfunding05-common-util<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="1-2-创建数据库相关内容"><a href="#1-2-创建数据库相关内容" class="headerlink" title="1.2 创建数据库相关内容"></a>1.2 创建数据库相关内容</h2><h3 id="1-2-1-创建数据库"><a href="#1-2-1-创建数据库" class="headerlink" title="1.2.1 创建数据库"></a>1.2.1 创建数据库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database project_crowd <span class="type">character</span> <span class="keyword">set</span> utf8;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-2-创建表"><a href="#1-2-2-创建表" class="headerlink" title="1.2.2 创建表"></a>1.2.2 创建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_admin(</span><br><span class="line">       id <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> auto_increment , # 主键</span><br><span class="line">       account <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="keyword">null</span>,  # 登陆账号</span><br><span class="line">       password <span class="type">char</span>(<span class="number">32</span>) <span class="keyword">not</span> <span class="keyword">null</span>,     # 密码</span><br><span class="line">       username <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="keyword">null</span>, # 用户名</span><br><span class="line">       email <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="keyword">null</span>,    # 邮箱</span><br><span class="line">       creat_time <span class="type">char</span>(<span class="number">19</span>),           # 创建时间</span><br><span class="line">        <span class="keyword">primary</span> key(id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-3-mybatis逆向工程"><a href="#1-3-mybatis逆向工程" class="headerlink" title="1.3  mybatis逆向工程"></a>1.3  mybatis逆向工程</h2><h3 id="1-3-1-配置-maven"><a href="#1-3-1-配置-maven" class="headerlink" title="1.3.1 配置 maven"></a>1.3.1 配置 maven</h3><p>​    在 atcrowdfunding06-common-reverse模块下进行逆向工程的构建</p>
-<p>​    编辑pom.xml如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.atguigu.crowd<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>atcrowdfunding06-common-reverse<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--mybatis核心依赖--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--构建过程中用到的插件--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">configurationFile</span>&gt;</span>$&#123;basedir&#125;/src/main/resources/generatorConfig.xml<span class="tag">&lt;/<span class="name">configurationFile</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">overwrite</span>&gt;</span>true<span class="tag">&lt;/<span class="name">overwrite</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">verbose</span>&gt;</span>true<span class="tag">&lt;/<span class="name">verbose</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--插件的依赖--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--逆向工程核心依赖--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--数据库连接池--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mchange<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>c3p0<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.9.5.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--mysql驱动--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.24<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">source</span>&gt;</span>7<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">target</span>&gt;</span>7<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-2-配置-generatorConfig-xml"><a href="#1-3-2-配置-generatorConfig-xml" class="headerlink" title="1.3.2 配置 generatorConfig.xml"></a>1.3.2 配置 generatorConfig.xml</h3><p>​    在resource目录下创建generatorConfig.xml，编写文件如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">generatorConfiguration</span></span></span><br><span class="line"><span class="meta">        <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- mybatis-generator:generate --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">&quot;atguiguTables&quot;</span> <span class="attr">targetRuntime</span>=<span class="string">&quot;MyBatis3&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--  是否去除自动生成的注释 true:是;false:否 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;suppressAllComments&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--数据库连接的信息：驱动类、连接地址、用户名、密码 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdbcConnection</span></span></span><br><span class="line"><span class="tag">                <span class="attr">driverClass</span>=<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">connectionURL</span>=<span class="string">&quot;jdbc:mysql://localhost:3306/project_crowd?serverTimezone=UTC&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">userId</span>=<span class="string">&quot;root&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">password</span>=<span class="string">&quot;azt12345&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--  默认 false，把 JDBC DECIMAL  和 NUMERIC  类型解析为 Integer，为 true 时把</span></span><br><span class="line"><span class="comment">        JDBC DECIMAL</span></span><br><span class="line"><span class="comment">        和 NUMERIC  类型解析为 java.math.BigDecimal --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaTypeResolver</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;forceBigDecimals&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaTypeResolver</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- targetProject:生成 Entity 类的路径 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetProject</span>=<span class="string">&quot;.\java&quot;</span></span></span><br><span class="line"><span class="tag">                            <span class="attr">targetPackage</span>=<span class="string">&quot;com.atguigu.crowd.entity&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- enableSubPackages:是否让 schema 作为包的后缀 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;enableSubPackages&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--  从数据库返回的值被清理前后的空格 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;trimStrings&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- targetProject:XxxMapper.xml 映射文件生成的路径 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetProject</span>=<span class="string">&quot;.\java&quot;</span></span></span><br><span class="line"><span class="tag">                         <span class="attr">targetPackage</span>=<span class="string">&quot;com.atguigu.crowd.mapper&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- enableSubPackages:是否让 schema 作为包的后缀 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;enableSubPackages&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- targetPackage：Mapper 接口生成的位置 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">&quot;XMLMAPPER&quot;</span></span></span><br><span class="line"><span class="tag">                             <span class="attr">targetProject</span>=<span class="string">&quot;.\java&quot;</span></span></span><br><span class="line"><span class="tag">                             <span class="attr">targetPackage</span>=<span class="string">&quot;com.atguigu.crowd.mapper&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- enableSubPackages:是否让 schema 作为包的后缀 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;enableSubPackages&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaClientGenerator</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--  数据库表名字和我们的 entity 类对应的映射指定 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">&quot;t_admin&quot;</span> <span class="attr">domainObjectName</span>=<span class="string">&quot;Admin&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>（注：数据库连接池中需要自己根据本地数据库的信息配置）</p>
-<h3 id="1-3-3-构建逆向工程"><a href="#1-3-3-构建逆向工程" class="headerlink" title="1.3.3 构建逆向工程"></a>1.3.3 构建逆向工程</h3><p>步骤如下：</p>
-<p><img src="/images/image-20210702213312437.png" alt="image-20210702213312437"></p>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="1-3-4-将构建生成的文件分类移动"><a href="#1-3-4-将构建生成的文件分类移动" class="headerlink" title="1.3.4 将构建生成的文件分类移动"></a>1.3.4 将构建生成的文件分类移动</h3><ul>
-<li><p>在模块atcrowdfunding02-admin-webui的resources目录下新建 mybatis/mapper文件夹</p>
+<h4 id="解决思路："><a href="#解决思路：" class="headerlink" title="解决思路："></a>解决思路：</h4><p>利用单向环形链表来解决此问题</p>
+<ol>
+<li>构建单项环形链表<ol>
+<li>创建第一个节点，让first指向该节点，然后first.next = first形成环状</li>
+<li>定义一个指针temp，初始值为first，然后每加入一个新节点node，就将temp.next = node，node.next = first ，temp = node 这样就达成单向循环链表了</li>
+</ol>
 </li>
-<li><p>将刚刚生成的AdminMapper.xml移动到该文件夹下</p>
+<li>实现遍历环形链表的方法<pre><code>1. 辅助指针temp指向first
+ 2. while循环遍历即可，当temp.next == first,则说明遍历结束。
+</code></pre>
 </li>
-<li><p>将AdminMapper类移动到atcrowdfunding03-admin-component模块下</p>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建单向环形链表类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CircleSingleLinkedList</span></span>&#123;</span><br><span class="line">    <span class="comment">// 创建first节点，初始值为空</span></span><br><span class="line">    <span class="keyword">private</span> JNode first = <span class="keyword">new</span> JNode(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加num个节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(num&lt;<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;num的值不正确&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        JNode temp = <span class="keyword">null</span>; <span class="comment">// 辅助指针</span></span><br><span class="line">        <span class="comment">// 使用for循环创建环形链表</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= num ; i++) &#123;</span><br><span class="line">            JNode jNode = <span class="keyword">new</span> JNode(i);</span><br><span class="line">            <span class="keyword">if</span> (i==<span class="number">1</span>)&#123;</span><br><span class="line">                first = jNode;</span><br><span class="line">                first.setNext(first);</span><br><span class="line">                temp = first;</span><br><span class="line">            &#125;</span><br><span class="line">            temp.setNext(jNode);</span><br><span class="line">            jNode.setNext(first);</span><br><span class="line">            temp = jNode;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (first==<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;链表为空&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        JNode temp = first;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">            System.out.println(temp.getNo());</span><br><span class="line">            <span class="keyword">if</span> (temp.getNext()==first)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            temp = temp.getNext();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 环形链表的节点类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">JNode</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> no; <span class="comment">// 编号</span></span><br><span class="line">    <span class="keyword">private</span> JNode next; <span class="comment">// 指向下一个节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JNode</span><span class="params">(<span class="keyword">int</span> no)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.no = no;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> no;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNo</span><span class="params">(<span class="keyword">int</span> no)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.no = no;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> JNode <span class="title">getNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNext</span><span class="params">(JNode next)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>```java<br>  //根据参数值确定出圈的顺序(start表示开始的位置，m表示数几次,len表示刚开始有几个节点)</p>
+<pre><code>public void outCircle(int start,int m,int len)&#123;
+    JNode node1 = first; // 指针一，初始位置在队列头
+    JNode node2 = get(len); // 指针二，初始位置在队尾
+    for (int j = 0;j &lt; start-1;j++)&#123; // 通过遍历，两个指针同时移动，将指针一定位到初始节点
+        node1 = node1.getNext();
+        node2 = node2.getNext();
+    &#125;
+    while (node1.getNext()!=node1)&#123; // 判断圈内是否只剩一个节点
+        for (int i = 1; i &lt; m ; i++) &#123; // 移动m-1次，删除节点
+            node1 = node1.getNext();
+            node2 = node2.getNext();
+        &#125;
+        System.out.print(node1.getNo()+&quot;\t&quot;);
+        node1 = node1.getNext();
+        node2.setNext(node1);
+    &#125;
+    System.out.print(node1.getNo()+&quot;\t&quot;);
+
+&#125;
+// 返回第n个节点
+public JNode get(int n)&#123;
+    JNode temp = first;
+    for (int i = 1; i &lt; n ; i++) &#123;
+        temp = temp.getNext();
+    &#125;
+    return temp;
+&#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 测试：</span><br><span class="line"></span><br><span class="line">   ```java</span><br><span class="line">      CircleSingleLinkedList c = new CircleSingleLinkedList();</span><br><span class="line">           c.add(3);</span><br><span class="line">           c.show();</span><br><span class="line">           c.outCircle(3,1,3);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/image-20210909225438522.png" alt="image-20210909225438522"></p>
 </li>
-<li><p>将Admin和AdminExample类移动到atcrowdfunding04-admin-entity模块下</p>
-</li>
-</ul>
-<p>其中第三步会报错，需要在pom文件中导入mybatis依赖</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mybatis核心依赖--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.add(<span class="number">7</span>);</span><br><span class="line">c.show();</span><br><span class="line">c.outCircle(<span class="number">3</span>,<span class="number">2</span>,<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="1-3-5-生成Admin类中的构造器和toString方法"><a href="#1-3-5-生成Admin类中的构造器和toString方法" class="headerlink" title="1.3.5 生成Admin类中的构造器和toString方法"></a>1.3.5 生成Admin类中的构造器和toString方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Admin</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Admin</span><span class="params">(Integer id, String account, String password, String username, String email, String creatTime)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.account = account;</span><br><span class="line">        <span class="keyword">this</span>.password = password;</span><br><span class="line">        <span class="keyword">this</span>.username = username;</span><br><span class="line">        <span class="keyword">this</span>.email = email;</span><br><span class="line">        <span class="keyword">this</span>.creatTime = creatTime;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Admin&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, account=&#x27;&quot;</span> + account + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, password=&#x27;&quot;</span> + password + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, username=&#x27;&quot;</span> + username + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, email=&#x27;&quot;</span> + email + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, creatTime=&#x27;&quot;</span> + creatTime + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-3-6-项目结构"><a href="#1-3-6-项目结构" class="headerlink" title="1.3.6 项目结构"></a>1.3.6 项目结构</h3><p>如图：</p>
-<p><img src="/images/image-20210702213841010.png" alt="image-20210702213841010"></p>
+<p><img src="/images/image-20210909225756390.png" alt="image-20210909225756390"></p>
 
     
 
@@ -357,7 +342,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://anzz.gitee.io/2021/06/02/“尚筹网”项目笔记/" title="“尚筹网”项目笔记" target="_blank">https://anzz.gitee.io/2021/06/02/“尚筹网”项目笔记/</a>
+          <a href="https://anzz.gitee.io/2020/03/17/单向环形链表/" title="环形链表" target="_blank">https://anzz.gitee.io/2020/03/17/单向环形链表/</a>
         </li>
         
         <li>
@@ -373,12 +358,18 @@
   </div>
   <div class="article-info article-info-index">
     
-    <div class="article-pop-out tagcloud">
-      <i class="icon-tuding"></i>
-      <a class="article-tag-list-link color3">置顶</a>
-    </div>
     
-    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -429,7 +420,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://anzz.gitee.io/2021/06/02/%E2%80%9C%E5%B0%9A%E7%AD%B9%E7%BD%91%E2%80%9D%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://anzz.gitee.io/2020/03/17/%E5%8D%95%E5%90%91%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -444,9 +435,18 @@
 
 <nav id="article-nav">
   
+    <a href="/2020/04/10/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          稀疏数组
+        
+      </div>
+    </a>
   
-    <a href="/2021/05/02/%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">单例设计模式</div>
+  
+    <a href="/2020/03/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java常用类</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -473,7 +473,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">1. 1 项目架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E5%88%9B%E5%BB%BA%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.1.1 创建工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E6%B7%BB%E5%8A%A0moudle%E9%97%B4%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB"><span class="toc-number">1.2.</span> <span class="toc-text">1.1.2 添加moudle间的依赖关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">1.2 创建数据库相关内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">1.2.1 创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-number">2.2.</span> <span class="toc-text">1.2.2 创建表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-mybatis%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">1.3  mybatis逆向工程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E9%85%8D%E7%BD%AE-maven"><span class="toc-number">3.1.</span> <span class="toc-text">1.3.1 配置 maven</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E9%85%8D%E7%BD%AE-generatorConfig-xml"><span class="toc-number">3.2.</span> <span class="toc-text">1.3.2 配置 generatorConfig.xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E6%9E%84%E5%BB%BA%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text">1.3.3 构建逆向工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.4.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-4-%E5%B0%86%E6%9E%84%E5%BB%BA%E7%94%9F%E6%88%90%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E7%A7%BB%E5%8A%A8"><span class="toc-number">3.5.</span> <span class="toc-text">1.3.4 将构建生成的文件分类移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-5-%E7%94%9F%E6%88%90Admin%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%9E%84%E9%80%A0%E5%99%A8%E5%92%8CtoString%E6%96%B9%E6%B3%95"><span class="toc-number">3.6.</span> <span class="toc-text">1.3.5 生成Admin类中的构造器和toString方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-6-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.7.</span> <span class="toc-text">1.3.6 项目结构</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Joseph%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">Joseph约瑟夫问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">问题描述：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">解决思路：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -613,7 +613,7 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -621,7 +621,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
